@@ -21,7 +21,7 @@ async function searchCountry(countryName) {
         loadingSpinner.classList.remove('hidden');
 
         // 1. Fetch country data using the required API
-        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
         
         // 2.5 Error handling: Throw error if country is not found
         if (!response.ok) {
